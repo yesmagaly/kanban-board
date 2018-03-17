@@ -1,8 +1,10 @@
 import { configure } from '@storybook/react';
 
 function loadStories() {
-  require('../src/modules/styleguide/components/Button/Button-story.js');
-  // You can require as many stories as you need.
+  // Load all story components
+  const reqs = require.context("../src/modules/styleguide", true, /\.stories\.js$/)
+
+  reqs.keys().forEach( filename => reqs( filename ) )
 }
 
 configure(loadStories, module);
