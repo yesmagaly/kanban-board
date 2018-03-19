@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider, injectGlobal } from 'styled-components'
 
-import theme from './theme/index'
+import themeSettings from './theme/index'
 
 // Global styles.
 injectGlobal`
@@ -14,7 +14,7 @@ injectGlobal`
 `
 
 const StylesProvider = ({ children }) => (
-  <ThemeProvider theme={ theme }>
+  <ThemeProvider theme={ themeSettings }>
     { children }
   </ThemeProvider>
 )

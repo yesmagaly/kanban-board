@@ -1,17 +1,18 @@
 import styled, { css } from 'styled-components'
-import { color, fontFamily, fontSize } from '../../theme'
+import { color, fontFamily, fontSize } from '../../theme/index'
 
 const Button = styled.button`
-  background: skyblue;
-  padding: 1rem 1.75rem;
-  border-radius: 30px;
-  min-width: 100px;
+  background: ${color('blue')};
   border: 1px solid transparent;
-  font-weight: bold;
+  border-radius: 3px;
+  padding: .95rem 1.25rem;
+  color: ${color('white')};
+  cursor: pointer;
   font-family: ${fontFamily('sans')};
   font-size: ${fontSize('small')};
-  color: ${color('red')};
-  cursor: pointer;
+  font-weight: 900;
+  min-width: 100px;
+  text-transform: uppercase;
 
   &:focus {
     outline: none;
