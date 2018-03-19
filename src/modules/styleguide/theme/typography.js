@@ -1,6 +1,6 @@
 export default {
   // Font families.
-  sans: 'arial',
+  sans: 'Roboto',
   serif: 'serif',
 
   // Font sizes.
