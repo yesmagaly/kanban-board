@@ -6,7 +6,8 @@
   "dependencies": {
     "next": "^5.0.1-canary.16",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.2.3"
   },
   "scripts": {
     "dev": "next",
@@ -15,6 +16,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^3.3.15"
+    "@storybook/react": "^3.3.15",
+    "babel-plugin-module-resolver": "^3.1.0",
+    "babel-plugin-styled-components": "^1.5.1"
   }
 }

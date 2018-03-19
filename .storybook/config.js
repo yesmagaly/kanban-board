@@ -1,10 +1,19 @@
-import { configure } from '@storybook/react';
+import React from 'react'
+import { configure, addDecorator } from '@storybook/react'
+
+import StylesProvider from '../src/modules/styleguide/StylesProvider'
+
+// Add Global decorators.
+addDecorator(story => {
+  return <StylesProvider>{ story() }</StylesProvider>
+})
+// addDecorator(story => <div style={{ padding: 20 }}>{story()}</div>);
+
+// Load all story components
+const _require = require.context("../src/modules/styleguide", true, /\.stories\.js$/)
 
 function loadStories() {
-  // Load all story components
-  const reqs = require.context("../src/modules/styleguide", true, /\.stories\.js$/)
-
-  reqs.keys().forEach( filename => reqs( filename ) )
+  _require.keys().forEach( filename => _require( filename ) )
 }
 
 configure(loadStories, module);

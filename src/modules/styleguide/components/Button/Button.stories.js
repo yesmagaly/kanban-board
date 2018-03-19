@@ -6,3 +6,7 @@ storiesOf('Button', module)
   .add('with text', () => (
     <Button>Hello Button</Button>
   ))
+
+  .add('Inverse', () => (
+    <Button inverse>Hello Button</Button>
+  ))
