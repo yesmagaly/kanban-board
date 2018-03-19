@@ -1,8 +1,7 @@
-import React from 'react'
 import styled, { css } from 'styled-components'
 import { color, fontFamily, fontSize } from '../../theme'
 
-const Button  = styled.button`
+const Button = styled.button`
   background: skyblue;
   padding: 1rem 1.75rem;
   border-radius: 30px;
@@ -18,7 +17,7 @@ const Button  = styled.button`
     outline: none;
   }
 
-  ${ props => props.inverse && css`
+  ${props => props.inverse && css`
     background: #444;
   `}
 `

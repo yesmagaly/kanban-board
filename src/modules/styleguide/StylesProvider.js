@@ -1,5 +1,6 @@
 import React from 'react'
-import styled, { ThemeProvider, injectGlobal }  from 'styled-components'
+import PropTypes from 'prop-types'
+import { ThemeProvider, injectGlobal } from 'styled-components'
 
 import theme from './theme/index'
 
@@ -17,5 +18,9 @@ const StylesProvider = ({ children }) => (
     { children }
   </ThemeProvider>
 )
+
+StylesProvider.propTypes = {
+  children: PropTypes.node
+}
 
 export default StylesProvider
