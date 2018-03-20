@@ -38,7 +38,7 @@ const Card = ({ title, owners, labels }) => {
       <Header>
         <Labels>
           { labels.map((label, index) => (
-            <Label key={ index } kind={ label.color }></Label>
+            <Label key={ index } kind={ label.color } />
           )) }
         </Labels>
 
