@@ -3,23 +3,24 @@ import { color } from '../../theme/index'
 
 const Label = styled.div`
   background-color: ${color('blue')};
-  height: 3px;
-  width: 35px;
   border-radius: 3px;
+  height: 3px;
+  margin-right: .3rem;
+  width: 35px;
 
-  ${props => props.red && css`
+  ${props => props.kind === 'red' && css`
     background-color: ${color('pink')};
   `}
 
-  ${props => props.yellow && css`
+  ${props => props.kind === 'yellow' && css`
     background-color: ${color('yellow')};
   `}
 
-  ${props => props.green && css`
+  ${props => props.kind === 'green' && css`
     background-color: ${color('green')};
   `}
 
-  ${props => props.purple && css`
+  ${props => props.kind === 'purple' && css`
     background-color: ${color('purple')};
   `}
 `

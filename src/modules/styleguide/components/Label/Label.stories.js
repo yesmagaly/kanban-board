@@ -9,16 +9,16 @@ storiesOf('Label', module)
   ))
 
   .add('Red', () => (
-    <Label red />
+    <Label kind='red' />
   ))
 
   .add('Yellow', () => (
-    <Label yellow />
+    <Label kind='yellow' />
   ))
 
   .add('Green', () => (
-    <Label green />
+    <Label kind='green' />
   ))
   .add('Purple', () => (
-    <Label purple />
+    <Label kind='purple' />
   ))
