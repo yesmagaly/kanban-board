@@ -6,8 +6,8 @@ import { color } from '../../theme/index'
 
 const AddButton = styled.button`
   background: ${color('white')};
-  border: 1px dashed ${color('gray')};
-  color: ${color('gray')};
+  border: 1px dashed ${color('grey')};
+  color: ${color('grey')};
   height: 20px;
   padding: 0;
   width: 20px;

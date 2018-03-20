@@ -22,7 +22,7 @@ const Owner = styled.div`
   `}
 
   ${props => props.kind === 'blue' && css`
-    background-color: #dce5fe;
+    background-color: ${color('lightBlue')};
     color: ${color('blue')};
   `}
 `
