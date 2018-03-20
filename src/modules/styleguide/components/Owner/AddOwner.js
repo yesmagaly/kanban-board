@@ -7,10 +7,10 @@ import { color } from '../../theme/index'
 const AddButton = styled.button`
   background: ${color('white')};
   border: 1px dashed ${color('gray')};
-  height: 20px;
-  width: 20px;
   color: ${color('gray')};
+  height: 20px;
   padding: 0;
+  width: 20px;
 `
 
 const AddOwner = () => (

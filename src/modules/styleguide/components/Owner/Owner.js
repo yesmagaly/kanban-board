@@ -12,6 +12,7 @@ const Owner = styled.div`
   font-weight: 900;
   height: 20px;
   line-height: 20px;
+  margin-left: .3rem;
   text-align: center;
   width: 20px;
 

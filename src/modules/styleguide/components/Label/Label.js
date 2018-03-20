@@ -4,7 +4,7 @@ import { color } from '../../theme/index'
 const Label = styled.div`
   background-color: ${color('blue')};
   height: 3px;
-  width: 60px;
+  width: 35px;
   border-radius: 3px;
 
   ${props => props.red && css`
