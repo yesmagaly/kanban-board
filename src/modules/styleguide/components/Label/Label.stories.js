@@ -1,9 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { MarginDecorator } from '../../StoryDecorators'
 
 import Label from './Label'
 
 storiesOf('Label', module)
+  .addDecorator(MarginDecorator)
+
   .add('Blue', () => (
     <Label />
   ))
