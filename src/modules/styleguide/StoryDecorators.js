@@ -13,10 +13,10 @@ export const CenterDecorator = story => (
   <Center>{ story() }</Center>
 )
 
-const Padding = styled.div`
+const Margin = styled.div`
   margin: 8px;
 `
 
 export const MarginDecorator = story => (
-  <Padding>{ story() }</Padding>
+  <Margin>{ story() }</Margin>
 )
