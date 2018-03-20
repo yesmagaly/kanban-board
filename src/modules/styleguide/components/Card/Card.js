@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { color, fontFamily } from '../../theme/index'
 
 import Label from '../Label/Label'
@@ -8,8 +9,7 @@ import AddOwner from '../Owner/AddOwner'
 
 const DefaultCard = styled.div`
   border: 1px solid ${color('gray')};
-  height: 80px;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   width: 250px;
 `
 
@@ -28,22 +28,45 @@ const Footer = styled.footer`
 
 const Header = styled.header``
 
-const Card = () => {
+const Labels = styled.div`
+  display: flex;
+`
+
+const Card = ({ title, owners, labels }) => {
   return (
     <DefaultCard>
       <Header>
-        <Label />
+        <Labels>
+          { labels.map((label, index) => (
+            <Label key={ index } kind={ label.color }></Label>
+          )) }
+        </Labels>
+
         <Title>
-          Stage 2 - Understand
+          { title }
         </Title>
       </Header>
 
       <Footer>
         <AddOwner />
-        <Owner>J</Owner>
+        { owners.map((owner, index) => (
+          <Owner key={ index } kind={ owner.color }>{ owner.name[0] }</Owner>
+        )) }
+
       </Footer>
     </DefaultCard>
   )
+}
+
+Card.propTypes = {
+  title: PropTypes.string,
+  owners: PropTypes.array,
+  labels: PropTypes.array,
+}
+
+Card.defaultProps = {
+  owners: [],
+  labels: []
 }
 
 export default Card
