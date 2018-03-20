@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import Card from './Card'
 
-const data = {
+export const cardMock = {
   title: 'Stage 3 - Understand',
   owners: [
     {
@@ -38,5 +38,5 @@ storiesOf('Card', module)
   ))
 
   .add('Second', () => (
-    <Card { ...data } />
+    <Card { ...cardMock } />
   ))

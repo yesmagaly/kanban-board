@@ -8,9 +8,10 @@ import Owner from '../Owner/Owner'
 import AddOwner from '../Owner/AddOwner'
 
 const DefaultCard = styled.div`
-  border: 1px solid ${color('gray')};
+  border: 1px solid ${color('grey')};
   padding: 1rem;
   width: 250px;
+  margin-bottom: 16px;
 `
 
 const Title = styled.h3`
